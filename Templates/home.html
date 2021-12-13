@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block cuerpo %}
+
+<div class="form">
+    
+    <form method="GET">{% csrf_token %}
+        <input type="text" id="kword" name="kword" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+        
+    </form>
+
+</div>
+
+<div class="lista">
+    <ul>
+        {% for e in lista%}
+        <li> {{e}} </li>
+        {%endfor%}
+        </ul>
+</div>
+
+
+
+{% endblock cuerpo %}
