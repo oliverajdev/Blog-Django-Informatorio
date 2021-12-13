@@ -1,9 +1,10 @@
 
 from pathlib import Path
+from unipath import Path
 
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).ancestor(2)
 
 
 
@@ -21,7 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'import_export', 
+    'import_export',
+    'ckeditor', 
     #Aplicaciones locales
     'Aplications.blog_app',
 
@@ -42,7 +44,7 @@ ROOT_URLCONF = 'Blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR.child('Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,6 +79,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+#Configuracion de ckeditor
+
+CKEDITOR_CONFIGS = {
+    'default' : {
+        'toolbar': 'full',
+   
+        
+    }
+    
+}
 
 
 

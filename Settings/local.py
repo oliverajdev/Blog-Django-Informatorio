@@ -17,7 +17,8 @@ DATABASES = {
 
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/Static/'
+STATICFILES_DIRS = [BASE_DIR.child('static')]
 
 
 
