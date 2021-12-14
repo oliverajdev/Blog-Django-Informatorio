@@ -6,8 +6,8 @@ from .models import Post
 class BaseView(TemplateView):
     template_name = 'base.html'
     
-class HomeView(ListView):
-    template_name = 'home.html'
+class NoticiasView(ListView):
+    template_name = 'noticias.html'
     context_object_name = 'lista'
     
     def get_queryset(self):

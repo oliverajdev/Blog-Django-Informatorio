@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block cuerpo %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/noticias.css'%}">
+</head>
+
+
+
+<div class="lista_noticias">
+    <ul>
+        {% for e in lista%}
+        <li>
+       <div>
+        <img class="l_img" src="{{e.imagen}}" alt="">
+       </div>
+       <div class="l_2">
+        <h2 class="l_titulo">{{e.titulo}}</h2>
+        <h4 class="l_descripcion">{{e.descripcion}}</h4>
+        <div class="l_contenido">{{e.contenido}}
+         
+        </div>
+        <a href="#">Leer más</a>  
+        <div>
+        <p class="l_autor"> {{e.autor}} </p>
+        <p class="l_fecha"> {{e.fecha_creacion}}</p>
+        </div>
+       </div>
+        </li>
+        {%endfor%}
+    </ul>
+</div>
+
+
+
+{% endblock cuerpo %}
+
+{% block busqueda%}
+<div class="form">
+    
+    <form method="GET">{% csrf_token %}
+       
+            <input type="text" id="kword" name="kword" placeholder="Buscar">
+       
+        <button type="submit"><i class="fas fa-search"></i></button>
+        
+    </form>
+
+</div>
+
+{% endblock busqueda%}
