@@ -1,13 +1,16 @@
 
-
+.lista_noticias{
+    font-size: 13px;
+   
+}
 
 .lista_noticias ul li{
     width: 700px;
-    height: 240px;
+    height: 300px;
     list-style: none;
     display: flex;
     flex-direction: row;
-    border: 10px;
+  
     
 }
 
@@ -15,6 +18,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 50px;
+   
   
     
 }
@@ -22,6 +26,7 @@
 .l_titulo{
     font-size: 25px;
     font-style: italic;
+    text-decoration:underline
 }
 
 .l_descripcion{
@@ -34,18 +39,54 @@
 }
 
 .l_contenido{
+
     max-height:58px;
-    
-    
     overflow: hidden;
+   
+    
+  
+    
 }
 
 .l_img{
   height: 170px;
-  width: 170px;
+  width: 250px;
+  background-size: 100%;
+  object-fit: cover;
+  
   
 }
 
 .l_2{
     padding-left: 20px;
+    width: 700px;
+   
+   
 }
+
+.ul_pag{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.ul_pag li{
+    display:inline-block;
+    width: 120px;
+    
+    background-color: rgb(153, 153, 153);
+    text-align: center;
+    border-radius: 3px;
+    margin: 15px;
+
+    
+    
+    
+}
+
+.ul_pag li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+}
+

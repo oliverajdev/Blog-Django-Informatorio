@@ -18,7 +18,7 @@
        <div class="l_2">
         <h2 class="l_titulo">{{e.titulo}}</h2>
         <h4 class="l_descripcion">{{e.descripcion}}</h4>
-        <div class="l_contenido">{{e.contenido}}
+        <div class="l_contenido">{{e.contenido | safe}}
          
         </div>
         <a href="#">Leer más</a>  
@@ -30,7 +30,22 @@
         </li>
         {%endfor%}
     </ul>
+
 </div>
+{% if is_paginated %}
+<div class="pag">
+    <ul class="ul_pag">
+    {% if page_obj.has_previous %}
+       <li><a href="?page={{page_obj_previous_page_number}}">Anterior</a></li>
+    {% endif %}
+    {% for pagina in paginator.page_range %}
+        <li><a href="?page={{pagina}}">{{pagina}}</a></li>
+    {% endfor %}
+        <li><a href="?page={{page_obj_next_page_number}}">Siguiente</a></li>
+    </ul>
+</div>
+{% endif %}
+
 
 
 
