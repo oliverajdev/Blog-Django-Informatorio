@@ -1,0 +1,30 @@
+.o_contenedor ul {
+    height: 100vh;
+    width: 810px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+    margin: auto;
+    grid-gap: 20px;
+}
+.o_contenedor ul li{
+
+  list-style: none;
+
+
+}
+
+.o_contenedor img{
+
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    transition: all 1s;
+
+
+}
+
+.o_contenedor img:hover{
+    transform: translate(35px);
+}
+

@@ -2,7 +2,19 @@
 {% load static %}
 
 {% block cuerpo %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/objetivos.css' %}">
+</head>
 
+
+
+<div class="o_contenedor">
+    <ul>
+        {%for e in lista %}
+        <li><a href="http://localhost:8000/post/{{e.slug}}"><img src="{{e.imagen}}" alt=""></a></li>
+        {% endfor %}
+    </ul>
+</div>
 
 
 {% endblock cuerpo %}
