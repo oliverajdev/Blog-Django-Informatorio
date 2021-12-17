@@ -19,15 +19,21 @@ class AutorResource(resources.ModelResource):
     class Meta:
         model = Autor
         
+
+        
         
             
 class AutorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    search_fields = ['nombres','apellidos','email']
-    list_display = ('nombres','apellidos','email','fecha_de_creacion')
+    search_fields = ['nombres','apellidos']
+    list_display = ('nombres','apellidos','fecha_de_creacion','id')
     resource_class = AutorResource
     
+
+class ComentariosAdmin(admin.ModelAdmin):
+    list_display = ('usuario','fecha_creacion','post')
 
 admin.site.register(Categoria,CategoriaAdmin)
 admin.site.register(Autor,AutorAdmin)
 admin.site.register(Post)
+admin.site.register(Comentarios,ComentariosAdmin)
 

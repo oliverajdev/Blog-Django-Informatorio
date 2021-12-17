@@ -3,7 +3,18 @@
 
 
 {% block cuerpo %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+</head>
+<h1 class="p_titulo">{{object.titulo}}</h1>
+<div class="c_img">
+    <img src="{{object.imagen}}" alt="">
+</div>
 
-{{object.contenido | safe}}
+<h3 class="p_descripcion">{{object.descripcion}}</h3>
+
+<div class="c_contenido">
+    {{object.contenido | safe}}
+</div>
 
 {% endblock cuerpo %}

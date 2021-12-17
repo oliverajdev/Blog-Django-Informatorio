@@ -1,6 +1,7 @@
 
 .lista_noticias{
     font-size: 13px;
+    min-height: calc(100vh - 400px - 200px)
    
 }
 
