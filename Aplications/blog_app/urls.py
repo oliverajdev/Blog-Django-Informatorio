@@ -8,6 +8,7 @@ urlpatterns = [
     path('noticias/',views.NoticiasView.as_view()),
     path('post/<slug:slug>/',views.PostDetail.as_view()),
     path('objetivos/',views.ObjetivosView.as_view()),
-    path('comentarios/<slug:slug>/',views.ComentariosView.as_view())
+    path('post/<slug:slug>/',views.ComentariosView.as_view()),
+    
     
 ]

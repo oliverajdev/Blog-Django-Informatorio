@@ -33,6 +33,9 @@ class NoticiasView(ListView):
 class PostDetail(DetailView):
     template_name = 'post.html'
     model = Post
+   
+
+       
  
     
 
@@ -69,17 +72,20 @@ class ObjetivosView(ListView):
  
 class ComentariosView(ListView):
      template_name = 'comentarios.html'
-     context_object_name = 'coment'
+     
+     
     
      
    
      def get_queryset(self):
          comentarios = self.kwargs['slug']
+         
          coment = Comentarios.objects.filter(
              
              post__slug = comentarios
              
          )
+         print('**************************',comentarios)
          
          return coment
      
