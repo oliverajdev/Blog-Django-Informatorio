@@ -4,8 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Usuarios(User):
-    
-    # usuario = User.get_username
+   
     
     class Meta:
         proxy = True
