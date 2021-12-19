@@ -33,6 +33,22 @@ class NoticiasView(ListView):
 class PostDetail(DetailView):
     template_name = 'post.html'
     model = Post
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostDetail, self).get_context_data(*args, **kwargs)
+        
+        comentarios = self.kwargs['slug']
+         
+        context['coment'] = Comentarios.objects.filter(
+             
+        post__slug = comentarios
+             
+         )
+        print('**************************',comentarios)
+         
+        
+       
+        return context
    
 
        
@@ -72,22 +88,23 @@ class ObjetivosView(ListView):
  
 class ComentariosView(ListView):
      template_name = 'comentarios.html'
+     context_object_name = 'coment'
      
      
     
      
    
-     def get_queryset(self):
-         comentarios = self.kwargs['slug']
+    #  def get_queryset(self):
+    #      comentarios = self.kwargs['slug']
          
-         coment = Comentarios.objects.filter(
+    #      coment = Comentarios.objects.filter(
              
-             post__slug = comentarios
+    #          post__slug = comentarios
              
-         )
-         print('**************************',comentarios)
+    #      )
+    #      print('**************************',comentarios)
          
-         return coment
+    #      return coment
      
      
      

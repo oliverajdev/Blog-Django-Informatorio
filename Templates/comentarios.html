@@ -1,11 +1,21 @@
 
 {% load static %}
-asdasd
-{% for e in object_list%}
+<head>
+    <link rel="stylesheet" href="{% static 'css/comentarios.css'%}">
+</head>
 
+{% for e in coment%}
 
-<ul>
-    <li>{{e.contenido}}</li>
+<ul class="com_ul"> 
+    <li>
+        <div class="com_usuario">
+            {{e.usuario}}
+
+       </div>
+       <div class="com_contenido">
+           {{e.contenido}}
+       </div>
+    </li>
 </ul>
 
 
