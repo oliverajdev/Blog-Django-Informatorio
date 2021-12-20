@@ -44,7 +44,7 @@ class PostDetail(DetailView):
         post__slug = comentarios
              
          )
-        print('**************************',comentarios)
+        
          
         
        
@@ -67,19 +67,16 @@ class ObjetivosView(ListView):
 
     
     def get_queryset(self):
-        palabra_clave = self.request.GET.get('kword', '')
-        lista = Post.objects.filter(
-            titulo__icontains = palabra_clave
-        )
+   
         queryset = Post.objects.filter(
            
            categoria__nombre = 'Objetivos'
            
          )
         
-        if palabra_clave:
-            return lista
-        else: return queryset
+      
+        
+        return queryset
  
  
  
@@ -94,19 +91,24 @@ class ComentariosView(ListView):
     
      
    
-    #  def get_queryset(self):
-    #      comentarios = self.kwargs['slug']
-         
-    #      coment = Comentarios.objects.filter(
-             
-    #          post__slug = comentarios
-             
-    #      )
-    #      print('**************************',comentarios)
-         
-    #      return coment
-     
-     
+
+class CampaniaView(ListView):
+    template_name = 'campania.html'
+    context_object_name = 'lista'
+    ordering = 'fecha_de_creacion'
+    
+    def get_queryset(self):
+   
+        queryset = Post.objects.filter(
+           
+           categoria__nombre = 'Campaña'
+           
+         )
+        
+      
+        
+        return queryset
+    
      
   
         

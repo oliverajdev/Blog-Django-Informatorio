@@ -1,3 +1,8 @@
+.o_contenedor{
+    min-height: 100vh;
+}
+
+
 .o_contenedor ul {
     height: 100vh;
     width: 810px;

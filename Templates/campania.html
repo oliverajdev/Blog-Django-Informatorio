@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block cuerpo%}
+<head>
+    <link rel="stylesheet" href="{% static 'css/campania.css'%}">
+</head>
+
+
+<div class="camp-p_contenedor">
+
+<h2 class="camp-p_titulo-p">CAMPAÑAS</h2>
+
+
+<p>
+Los Objetivos de Desarrollo Sostenible están todos interconectados entre sí y para alcanzar la Agenda 2030, debemos asegurarnos de que se cumplan cada uno de ellos. Las Naciones Unidas tienen diversas campañas en curso que se centran en áreas de trabajo específicas de algunos de estos objetivos.
+</p>
+
+<h2 class="camp-p_titulo">EL CLIMA</h2>
+<div class="camp-p_img">
+    <img src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/08/Climate-1024x232.png" alt="">
+</div>
+
+
+<p>
+El objetivo 13 hace un llamado de urgencia para tomar acciones que logren combatir el cambio climático y sus impactos. Para cumplir con este objetivo, los países adoptaron el Acuerdo de París, que busca limitar el aumento de la temperatura global por debajo de los 2 grados centígrados. La Cumbre del Secretario General sobre el Clima de 2019 tiene como objetivo aumentar y acelerar la acción climática para alcanzar los Objetivos del Acuerdo de París.
+</p>
+
+<h2 class="camp-p_titulo" >EL GÉNERO</h2>
+<div class="camp-p_img">
+    
+    <img src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/08/gender-1024x232.png" alt="">
+</div>
+
+<p>
+La violencia contra las mujeres y las niñas es una de las violaciones contra los derechos humanos más extensa, persistente y devastadora en el mundo de hoy. Aunque sean tiempos modernos, la desigualdad de género persiste en todo el mundo. Lograr igualdad de género y el empoderamiento de las mujeres y las niñas requerirá esfuerzos más enérgicos, que incluyan marcos jurídicos, para contrarrestar la discriminación basada en el género profundamente arraigada y que a menudo resulta de las actitudes patriarcales y las normas sociales relacionadas. Lee más sobre el Objetivo 5.
+</p>
+
+<h2 class="camp-p_titulo" >LA JUVENTUD</h2>
+<div class="camp-p_img">
+    <img src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/08/Water-1024x232.png" alt="">
+</div>
+
+<p>
+El agua es fundamental para el desarrollo sostenible y la erradicación de la pobreza y el hambre, así como es indispensable para el desarrollo humano, la salud y el bienestar. Los desafíos relacionados con el agua, entre ellos, el acceso limitado al agua potable y al saneamiento, la creciente presión sobre los recursos hídricos y los ecosistemas, los desastres y un riesgo exacerbado de sequías e inundaciones, han recibido una atención cada vez mayor en el ámbito del desarrollo mundial. Lee más sobre el Objetivo 6.
+</p>
+
+<h2 class="camp-p_titulo" >LA JUVENTUD</h2>
+<div class="camp-p_img">
+    <img src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/08/Youth-1024x232.png" alt="">
+</div>
+
+<p>
+Los jóvenes son la fuerza motriz que necesitamos para lograr un desarrollo sostenible y asegurar la paz mundial. Dotarlos de las habilidades y oportunidades necesarias para alcanzar su potencial, es una de las misiones más importantes de las Naciones Unidas, quienes trabajan para apoyar a las organizaciones dirigidas por jóvenes y empoderarlas para que participen en el traslado de la Agenda 2030 a la política local, nacional y regional. Ellas, desempeñan un papel importante en la implementación, el monitoreo y la revisión de la Agenda, así como en evaluar y responsabilizar el trabajo que realizan los gobiernos. Con compromiso político y recursos adecuados, los jóvenes tienen el potencial de hacer la transformación más efectiva del mundo y así construir un lugar mejor para todos.
+</p>
+
+</div>
+
+<ul class="camp_contenedor">
+{%for e in lista%}
+
+    <li>
+        <a href="http://localhost:8000/post/{{e.slug}}" class= 'camp_a'>
+
+            <h2 class="camp_titulo">{{e.titulo}}</h2>
+            <div class="camp_img">
+                <img src="{{e.imagen}}" alt="">
+            </div>
+            
+
+
+        </a>
+    
+    
+    </li>
+
+{%endfor%}
+</ul>
+
+
+{% endblock cuerpo%}

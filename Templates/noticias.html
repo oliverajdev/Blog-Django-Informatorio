@@ -41,7 +41,9 @@
     {% for pagina in paginator.page_range %}
         <li><a href="?page={{pagina}}">{{pagina}}</a></li>
     {% endfor %}
+    {%if page_obj.has_next%}
         <li><a href="?page={{page_obj_next_page_number}}">Siguiente</a></li>
+        {%endif%}
     </ul>
 </div>
 {% endif %}

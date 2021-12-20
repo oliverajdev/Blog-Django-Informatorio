@@ -3,10 +3,8 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/comentarios.css'%}">
 </head>
-
-{% for e in coment%}
-
 <ul class="com_ul"> 
+{% for e in coment%}
     <li>
         <div class="com_usuario">
             {{e.usuario}}
@@ -16,11 +14,8 @@
            {{e.contenido}}
        </div>
     </li>
-</ul>
-
-
 {%endfor%}
-
+</ul>
 
 
 
