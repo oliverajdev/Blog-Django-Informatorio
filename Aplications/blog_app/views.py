@@ -8,6 +8,8 @@ from Aplications.blog_app import models
 class BaseView(TemplateView):
     template_name = 'base.html'
     
+    
+    
 class NoticiasView(ListView):
     template_name = 'noticias.html'
     context_object_name = 'lista'
@@ -29,6 +31,9 @@ class NoticiasView(ListView):
         if palabra_clave:
             return lista
         else: return queryset
+        
+        
+        
     
 class PostDetail(DetailView):
     template_name = 'post.html'
@@ -45,21 +50,10 @@ class PostDetail(DetailView):
              
          )
         
-         
-        
-       
         return context
    
 
-       
- 
-    
-
-
-
-
-    
-    
+         
 class ObjetivosView(ListView):
     template_name = 'objetivos.html'
     context_object_name = 'lista'
@@ -80,13 +74,10 @@ class ObjetivosView(ListView):
  
  
  
- 
- 
- 
+
 class ComentariosView(ListView):
      template_name = 'comentarios.html'
      context_object_name = 'coment'
-     
      
     
      
@@ -110,6 +101,10 @@ class CampaniaView(ListView):
         return queryset
     
      
+     
+class InicioView(TemplateView):
+    template_name = 'inicio.html'
+    
   
         
  

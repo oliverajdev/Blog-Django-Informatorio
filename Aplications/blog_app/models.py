@@ -15,12 +15,6 @@ class Usuarios(User):
         
     def __str__(self):
         return self.first_name
-    
-
-
-
-
-
 
 
 class Categoria(models.Model):

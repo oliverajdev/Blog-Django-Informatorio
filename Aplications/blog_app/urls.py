@@ -9,6 +9,7 @@ urlpatterns = [
     path('post/<slug:slug>/',views.PostDetail.as_view()),
     path('objetivos/',views.ObjetivosView.as_view()),
     path('campania/',views.CampaniaView.as_view()),
+    path('inicio/',views.InicioView.as_view()),
     
     
 ]

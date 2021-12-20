@@ -1,0 +1,12 @@
+.i_contenedor{
+
+    width: 70%;
+    margin: auto;
+    height: calc( 100vh - 120px - 400px)
+
+}
+
+.i_contenedor h2{
+    text-align: center;
+    height: 120px;
+}
