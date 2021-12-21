@@ -1,16 +1,20 @@
 
 .lista_noticias{
-    font-size: 13px;
+    font-size: 20px;
     min-height: calc(100vh - 400px - 200px)
    
 }
 
 .lista_noticias ul li{
-    width: 700px;
+    width: 1000px;
     height: 300px;
     list-style: none;
     display: flex;
     flex-direction: row;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgb(153, 153, 153);
+   
   
     
 }
@@ -33,6 +37,8 @@
 .l_descripcion{
     color: rgb(153, 153, 153);
     font-weight: 200;
+    max-height: 60px;
+    overflow: hidden;
 }
 
 .l_autor{
@@ -47,10 +53,11 @@
 }
 
 .l_img{
-  height: 170px;
+  height: 250px;
   width: 250px;
   background-size: 100%;
   object-fit: cover;
+  margin-top: 20px;
   
   
 }
@@ -70,12 +77,15 @@
 
 .ul_pag li{
     display:inline-block;
-    width: 120px;
+    width: 40px;
+    height: 30px;
+    
     
     background-color: rgb(153, 153, 153);
     text-align: center;
-    border-radius: 3px;
+    
     margin: 15px;
+    padding-top: 3px;
  
     
 }
@@ -83,6 +93,7 @@
 .ul_pag li a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+    padding-top: 3px;
     
 }
 

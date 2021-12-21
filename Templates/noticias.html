@@ -36,13 +36,13 @@
 <div class="pag">
     <ul class="ul_pag">
     {% if page_obj.has_previous %}
-       <li><a href="?page={{page_obj_previous_page_number}}">Anterior</a></li>
+       <li><a href="?page={{page_obj_previous_page_number}}"><i class="fas fa-caret-left"></i></a></li>
     {% endif %}
     {% for pagina in paginator.page_range %}
         <li><a href="?page={{pagina}}">{{pagina}}</a></li>
     {% endfor %}
     {%if page_obj.has_next%}
-        <li><a href="?page={{page_obj_next_page_number}}">Siguiente</a></li>
+        <li><a href="?page={{page_obj_next_page_number}}"><i class="fas fa-caret-right"></i></a></li>
         {%endif%}
     </ul>
 </div>
