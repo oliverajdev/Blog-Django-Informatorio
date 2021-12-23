@@ -3,11 +3,13 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/comentarios.css'%}">
 </head>
+<h2 class="com_titulo">Comentarios</h2>
 <ul class="com_ul"> 
+    
 {% for e in coment%}
     <li>
         <div class="com_usuario">
-            {{e.usuario}}
+            {{e.usuario}}:
 
        </div>
        <div class="com_contenido">

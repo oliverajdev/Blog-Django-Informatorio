@@ -31,9 +31,20 @@ class AutorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
 
 class ComentariosAdmin(admin.ModelAdmin):
     list_display = ('usuario','fecha_creacion','post')
+    
+
+class PostResource(resources.ModelResource):
+    class Meta:
+        model = Post
+
+class PostAdmin(admin.ModelAdmin):
+    search_fields = ['titulo']
+    list_display = ('titulo','id','fecha_creacion','categoria')
+    model = Post
+       
 
 admin.site.register(Categoria,CategoriaAdmin)
 admin.site.register(Autor,AutorAdmin)
-admin.site.register(Post)
+admin.site.register(Post,PostAdmin)
 admin.site.register(Comentarios,ComentariosAdmin)
 
